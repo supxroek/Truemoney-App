@@ -1,16 +1,84 @@
-# truemoney_app
+# แอปพลิเคชันการโอนเงิน
 
-A new Flutter project.
+แอปพลิเคชันนี้ช่วยให้ผู้ใช้สามารถทำการโอนเงินผ่านระบบมือถือได้ โดยมีขั้นตอนการกรอกข้อมูลการโอนเงิน การยืนยัน OTP และการแสดงใบเสร็จการโอนเงิน
 
-## Getting Started
+## ฟีเจอร์
 
-This project is a starting point for a Flutter application.
+- กรอกข้อมูลการโอนเงิน (ชื่อผู้รับ, จำนวนเงิน, ข้อความถึงผู้รับ)
+- ยืนยันข้อมูลการโอนเงิน
+- การกรอกรหัส OTP เพื่อยืนยัน
+- แสดงรายละเอียดการโอนเงินพร้อมใบเสร็จ
+- บันทึกใบเสร็จ
 
-A few resources to get you started if this is your first Flutter project:
+## การติดตั้ง
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### ขั้นตอนการติดตั้ง
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone Repository**
+
+   ทำการคัดลอกโปรเจกต์ไปยังเครื่องของคุณ:
+
+   ```bash
+   git clone https://github.com/username/repository_name.git
+   cd repository_name
+   ```
+
+2. **ติดตั้ง Dependencies**
+
+   ใช้คำสั่งด้านล่างเพื่อติดตั้ง dependencies ที่จำเป็น:
+
+   ```bash
+   flutter pub get
+   ```
+
+3. **รันแอปพลิเคชัน**
+
+   คุณสามารถรันแอปพลิเคชันได้โดยใช้คำสั่งนี้:
+
+   ```bash
+   flutter run
+   ```
+
+## โครงสร้างของโปรเจกต์
+
+- transfer_screen.dart - หน้าจอกรอกข้อมูลโอนเงิน
+- confirm_payment_screen.dart - หน้าจอยืนยันข้อมูลการโอน
+- otp_screen.dart - หน้าจอกรอกรหัส OTP
+- receipt_screen.dart - หน้าจอแสดงใบเสร็จการโอนเงิน
+- main.dart - จุดเริ่มต้นของแอปพลิเคชัน
+
+## วิธีการใช้งาน
+
+1. กรอกข้อมูลโอนเงิน:
+
+- เข้าไปที่หน้ากรอกข้อมูลโอนเงิน (Transfer Screen)
+- กรอกข้อมูลต่างๆ เช่น ชื่อผู้รับ, จำนวนเงิน, ข้อความถึงผู้รับ
+- กดปุ่ม "โอนเงิน" เพื่อตรวจสอบข้อมูล
+
+2. ยืนยันข้อมูล:
+
+- ในหน้าตรวจสอบการโอนเงิน (Confirm Payment Screen), ตรวจสอบข้อมูลที่กรอกและกด "ยืนยันการชำระเงิน"
+
+3. กรอกรหัส OTP:
+
+- ในหน้ากรอกรหัส OTP (OTP Screen), กรอก OTP ที่ได้รับ (สามารถกรอกเลขอะไรก็ได้)
+
+4. แสดงใบเสร็จ:
+
+- เมื่อยืนยัน OTP แล้ว จะถูกนำไปยังหน้าจอใบเสร็จ (Receipt Screen) ที่แสดงรายละเอียดการโอนเงิน
+
+5. บันทึกใบเสร็จ:
+
+- คุณสามารถบันทึกใบเสร็จโดยการกดปุ่ม "บันทึกใบเสร็จ" และข้อมูลจะถูกบันทึกสำเร็จ
+
+## คำแนะนำ
+
+หากพบปัญหาหรือมีคำถามเกี่ยวกับแอปพลิเคชันนี้ สามารถเปิด issue ใน GitHub หรือส่งข้อความมาที่ [oaffanmanajit@gmail.com]
+
+## ลิขสิทธิ์
+
+โปรเจกต์นี้เป็นงานส่วนบุคคลและยังไม่มีการเผยแพร่ให้ใช้ในเชิงพาณิชย์
+
+    ```go
+    ในไฟล์ `README.md` นี้จะมีรายละเอียดเกี่ยวกับการติดตั้งและการใช้งานแอปพลิเคชันของคุณ รวมถึงโครงสร้างโปรเจกต์และตัวอย่างภาพหน้าจอ (หากมี) อีกด้วย
+    ```
